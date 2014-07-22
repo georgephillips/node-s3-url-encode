@@ -1,6 +1,6 @@
 describe('node-s3-url-encode', function () {
   var assert = require('assert');
-  var encodeS3URL = require('../');
+  var encodeS3URI = require('../');
 
   describe('Encoding', function () {
     var tests = {
@@ -36,7 +36,7 @@ describe('node-s3-url-encode', function () {
 
     function runTest(description, test) {
       it(description, function () {
-        assert.equal(encodeS3URL(test.input), test.output);
+        assert.equal(encodeS3URI(test.input), test.output);
       });
     }
 

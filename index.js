@@ -2,7 +2,7 @@
  * node-s3-url-encode - Because s3 urls are annoying
  */
 
-function encodeS3URL(filename) {
+function encodeS3URI(filename) {
   return encodeURI(filename) // Do the standard url encoding
               .replace(/\+/img, "%2B")
               .replace(/\!/img, "%21")
@@ -22,8 +22,8 @@ function encodeS3URL(filename) {
               .replace(/\?/img, "%3F")
               .replace(/\@/img, "%40");
 
-};
+}
 
 if (module) {
-  module.exports = encodeS3URL;
+  module.exports = encodeS3URI;
 }
